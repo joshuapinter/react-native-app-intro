@@ -7,7 +7,7 @@ react-native-app-intro is a react native component implementing a parallax effec
 
 ### Support ios、android
 <img src="http://i.giphy.com/3o6ozjLoOnYTXfzJgQ.gif">
-<img src="http://gifyu.com/images/android.gif">
+<img src="http://gifyu.com/images/android.gif" width="345">
 
 <a href="http://www.freepik.com">Designed by Freepik</a>
 
@@ -19,9 +19,10 @@ $ npm i react-native-app-intro --save
 
 ### Basic Usage
 
-You can use pageArray quick generation your app intro with parallax effect.   
+You can use pageArray quick generation your app intro with parallax effect. With the basic usage, the Android status bar will be updated to match your slide background color.
 
 <img src="http://i.giphy.com/l3V0khy22aUviTTaM.gif">
+<img src="./assets/sample-android.gif" width="280">
 
 ```javascript
 import React, { Component } from 'react';
@@ -58,7 +59,7 @@ class Example extends Component {
     }, {
       title: 'Page 2',
       description: 'Description 2',
-      img: 'https://goo.gl/GPO6JB',
+      img: require('../assets/some_image.png'),
       imgStyle: {
         height: 93 * 2.5,
         width: 103 * 2.5,
@@ -174,6 +175,10 @@ And in Android, image inside view component, view need width、height.
 | skipBtnLabel   | string、Text element  |  Skip                   | The bottom left custom Text label                                                                                                                                                                                                                                                                                                                  |
 | nextBtnLabel   | string、Text element   |  ›                      | The bottom left custom Text label                                                                                                                                                                                                                                                                                                                  |
 | pageArray      | array    |                         | In the basic usage, you can input object array to render basic view example: ```[[{title: 'Page 1', description: 'Description 1', img: 'https://goo.gl/uwzs0C', imgStyle: {height: 80 * 2.5, width: 109 * 2.5 }, backgroundColor: '#fa931d', fontColor: '#fff', level: 10 }]``` , level is parallax effect level ,if you use pageArray you can't use custom view |
+| defaultIndex | number   | 0 | number of the index of the initial index |
+| showSkipButton | bool | true | a boolean defining if we should render the skip button |
+| showDoneButton | bool | true | a boolean that defines if we should render the done button |
+| showDots | bool | true | a boolean that defines if we should render the bottom dots |
 
 ##### **Children View Properties**
 | Prop  | PropType | Default Value | Description           |
